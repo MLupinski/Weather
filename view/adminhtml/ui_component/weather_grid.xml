@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">weather_grid.weather_grid_data_source</item>
+            <item name="deps" xsi:type="string">weather_grid.weather_grid_data_source</item>
+        </item>
+    </argument>
+    <settings>
+        <spinner>weather_grid_columns</spinner>
+        <deps>
+            <dep>weather_grid.weather_grid_data_source</dep>
+        </deps>
+    </settings>
+    <dataSource name="weather_grid_data_source" component="Magento_Ui/js/grid/provider">
+        <settings>
+            <storageConfig>
+                <param name="indexField" xsi:type="string">weather_id</param>
+            </storageConfig>
+            <updateUrl path="mui/index/render"/>
+        </settings>
+        <dataProvider class="HTCode\Weather\Ui\DataProvider\Weather\WeatherDataProvider" name="weather_grid_data_source">
+            <settings>
+                <requestFieldName>weather_id</requestFieldName>
+                <primaryFieldName>weather_id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+    <listingToolbar>
+        <bookmark name="bookmarks"/>
+        <columnsControls name="columns_controls"/>
+        <filterSearch name="name"/>
+        <filters name="listing_filters"/>
+        <paging name="listing_paging"/>
+    </listingToolbar>
+    <columns name="weather_grid_columns">
+        <column name="weather_id">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">0</item>
+                </item>
+            </argument>
+            <settings>
+                <filter>textRange</filter>
+                <dataType>number</dataType>
+                <label translate="true">ID</label>
+            </settings>
+        </column>
+        <column name="town">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">1</item>
+                </item>
+            </argument>
+            <settings>
+                <filter>text</filter>
+                <dataType>text</dataType>
+                <label translate="true">Town</label>
+            </settings>
+        </column>
+        <column name="description">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">2</item>
+                </item>
+            </argument>
+            <settings>
+                <filter>text</filter>
+                <dataType>text</dataType>
+                <label translate="true">Description</label>
+            </settings>
+        </column>
+        <column name="current_temp">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">3</item>
+                </item>
+            </argument>
+            <settings>
+                <filter>textRange</filter>
+                <dataType>number</dataType>
+                <label translate="true">Current Temperature</label>
+            </settings>
+        </column>
+        <column name="max_temp">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">4</item>
+                </item>
+            </argument>
+            <settings>
+                <filter>textRange</filter>
+                <dataType>number</dataType>
+                <label translate="true">Max Temperature</label>
+            </settings>
+        </column>
+        <column name="min_temp">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">5</item>
+                </item>
+            </argument>
+            <settings>
+                <filter>textRange</filter>
+                <dataType>number</dataType>
+                <label translate="true">Min Temperature</label>
+            </settings>
+        </column>
+        <column name="check_datetime">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">60</item>
+                </item>
+            </argument>
+            <settings>
+                <filter>dateRange</filter>
+                <dataType>date</dataType>
+                <label translate="true">Date And Time Of The Weather Check</label>
+            </settings>
+        </column>
+    </columns>
+</listing>

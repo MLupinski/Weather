@@ -1,0 +1,20 @@
+{
+    "weather_data": {
+        "column": {
+            "weather_id": true,
+            "town": true,
+            "description": true,
+            "current_temp": true,
+            "max_temp": true,
+            "min_temp": true,
+            "wind_speed": true,
+            "check_datetime": true
+        },
+        "index": {
+            "WEATHER_DATA_WEATHER_ID": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.weather-info {
+    width: 270px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.other-info {
+    font-size: 1rem;
+}
+
+.current-temp h2 {
+    font-weight: 400;
+    color: #EBBD00;
+}
+
+.weather-description img {
+    width: 60px;
+    height: 60px;
+}

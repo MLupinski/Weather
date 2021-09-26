@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="HTCode_Weather::weather" title="Weather" translate="title" module="HTCode_Weather" sortOrder="20" dependsOnModule="HTCode_Weather" resource="HTCode_Weather::weather"/>
+        <add id="HTCode_Weather::show_data" title="Weather History" translate="title" module="HTCode_Weather" sortOrder="30" parent="HTCode_Weather::weather" action="weather/index/" resource="HTCode_Weather::show_data"/>
+    </menu>
+</config>
