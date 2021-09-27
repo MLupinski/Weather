@@ -1,5 +1,4 @@
-# MagentoWeatherModule
-Moduł Pogodowy Magento 2.4.x 
+# Moduł Pogodowy Magento 2.4.x 
 
 Aby aktywować moduł należy wrzucić go do folderu <b>app/code/HTCode/Weather</b>
 
